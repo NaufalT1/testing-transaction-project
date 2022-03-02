@@ -1,12 +1,8 @@
 package main;
 
-import com.sun.org.apache.xpath.internal.objects.XString;
-import model.person;
+import model.Person;
 import org.junit.jupiter.api.Test;
-
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,8 +14,8 @@ class mainTest {
         String user1Name = "John";
         String user2Name = "Doe";
         int initAmount = 10;
-        person user1 = new person(user1Name, 0, initAmount);
-        person user2 = new person(user2Name, 1, initAmount);
+        Person user1 = new Person(user1Name, 0, initAmount);
+        Person user2 = new Person(user2Name, 1, initAmount);
         int transAmount = 10;
 
         main.transaction(user1,user2,transAmount);
