@@ -1,6 +1,6 @@
 package main;
 
-import model.person;
+import model.Person;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -13,16 +13,16 @@ public class main {
         String[] listName = {"Robert","Downey","Chris","Tony"};
 
 
-        person [] listPerson = new person[listName.length];
+        Person[] listPeople = new Person[listName.length];
 
         for (int i = 0; i < listName.length; i++) {
-            listPerson[i] = new person(listName[i],i,50);
+            listPeople[i] = new Person(listName[i],i,50);
         }
 
-        getAllUserName(listPerson);
+        getAllUserName(listPeople);
 
-        transaction(listPerson[0],listPerson[1],10);
-        transaction(listPerson[1],listPerson[2],10);
+        transaction(listPeople[0], listPeople[1],10);
+        transaction(listPeople[1], listPeople[2],10);
 
         readHistory();
 
@@ -37,12 +37,12 @@ public class main {
             System.out.println(item);
         }
     }
-    public static void getAllUserName(person[] person){
-        for (person human: person) {
+    public static void getAllUserName(Person[] person){
+        for (Person human: person) {
             System.out.println(human.getName());
         }
     }
-    public static void transaction(person sender, person receiver, int amount){
+    public static void transaction(Person sender, Person receiver, int amount){
         // check balance
         int senderPoint = sender.getPoint();
         if (senderPoint < amount){

@@ -1,11 +1,11 @@
 package model;
 
-public class person {
+public class Person {
     String name;
     Integer id;
     Integer point;
 
-    public person(String name, Integer id, Integer point) {
+    public Person(String name, Integer id, Integer point) {
         this.name = name;
         this.id = id;
         this.point = point;
@@ -33,5 +33,13 @@ public class person {
 
     public void setPoint(Integer point) {
         this.point = point;
+    }
+
+    public String toString() {
+        return "person{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", point=" + point +
+                '}';
     }
 }
